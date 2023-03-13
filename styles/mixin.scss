@@ -1,0 +1,51 @@
+@import "./variables";
+// Mixins
+// add flex styles
+@mixin flex($align-item, $justify, $direction) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+//popup class
+.popup {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: $modal-background;
+}
+
+// responsive mixins
+@mixin tablet {
+  @media (min-width: $for-tablet) {@content;}
+}
+
+@mixin desktop {
+  @media (min-width: $for-desktope) {@content;}
+}
+
+@mixin responsive {
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+    width: 900px;
+  }
+}
+
+
+// settings mixins
+
+@mixin settings-container {
+  @include flex(start, center, column);
+  width: 90%;
+}

@@ -1,3 +1,225 @@
+@import "./styles/mixin";
+@import "./styles/variables";
+
+
 body {
-  background: red;
+  @include flex(center, center, row);
+  width: 100vw;
+  height: 100vh;
+  background: $white;
+  margin: 0;
+}
+
+.main {
+  @include flex(center, center, column);
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0px $grey;
+  background: $white;
+  &__head {
+    @include flex(center, center, column);
+    width: 100%;
+    &__title-cont {
+      @include flex(center, center, column);
+      width: 100%;
+      &--text {
+        margin: 10px 20px;
+      }
+    }
+    &__text {
+      width: 90%;
+      text-align: center;
+      &__links {
+        &__link {
+          text-decoration: none;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  &__text {
+    margin: 0 20px 10px;
+  }
+}
+
+#popup {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: $modal-background;
+}
+
+.c_popup__container {
+  @include flex(center, center, column);
+  width: 400px;
+  max-height: 94vh;
+  border-radius: 50px;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px 0px $grey;
+  background: $white;
+  overflow: auto;
+  &__title {
+    margin-top: 170px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__background {
+    @include settings-container;
+    &__title {
+      font-size: 20px;
+    }
+    &__container {
+      @include flex(center, space-evenly, row);
+      width: 100%;
+      &__input {
+        width: 200px;
+        height: 40px;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__font-type {
+    @include settings-container;
+    margin-top: 15px;
+    &__title {
+      font-size: 20px;
+    }
+    &__container {
+      @include flex(center, space-evenly, row);
+      width: 100%;
+      &--item {
+        @include flex(center, center, row);
+        width: 80px;
+        height: 60px;
+        border-radius: 12px;
+        border: 1px solid $grey;
+        font-size: 20px;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__title-position {
+    @include settings-container;
+    margin-top: 15px;
+    &__title {
+      font-size: 20px;
+    }
+    &__container {
+      @include flex(center, space-evenly, row);
+      width: 100%;
+      &--item {
+        @include flex(center, center, row);
+        width: 100px;
+        height: 80px;
+        border-radius: 12px;
+        border: 1px solid $grey;
+        font-size: 20px;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__change-link-color {
+    @include settings-container;
+    margin-top: 15px;
+    &__title {
+      font-size: 20px;
+    }
+    &__container {
+      @include flex(center, space-evenly, row);
+      width: 100%;
+      &__item {
+        @include flex(center, space-evenly, column);
+        width: 100px;
+        &--text {
+          font-size: 13px;
+          line-height: 14px;
+        }
+        &--input {
+          width: 100%;
+          height: 50px;
+        }
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__change-main-text {
+    @include settings-container;
+    margin-top: 15px;
+    &__title {
+      font-size: 20px;
+    };
+    &--container {
+      @include flex(center, center, column);
+      width: 100%;
+      &__item {
+        @include flex(center, center, column);
+        width: 100%;
+        label {
+          margin: 10px 0 5px;
+          font-size: 18px;
+        }
+        input {
+          width: 70%;
+          height: 30px;
+        }
+      }
+    }
+  }
+  &__change-mark-for-list {
+    @include settings-container;
+    margin-top: 15px;
+    &__title {
+      font-size: 20px;
+    }
+    &__container {
+      @include flex(center, space-evenly, row);
+      width: 100%;
+      &--item {
+        @include flex(center, center, row);
+        width: 50px;
+        height: 60px;
+        border-radius: 12px;
+        border: 1px solid $grey;
+        font-size: 15px;
+        text-align: center;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__close {
+    min-width: 110px;
+    min-height: 50px;
+    border: none;
+    background: #3a6073;
+    color: $white;
+    border-radius: 12px;
+    margin: 27px 0 7px;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
 }

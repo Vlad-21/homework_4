@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="main.css">
+	<title>My page</title>
+</head>
+<body>
+    <div class="main">
+		<div class="main__head">
+			<div class="main__head__title-cont">
+				<h1 class="main__head__title-cont--text">My page</h1>
+			</div>
+			<div class="main__head__text">
+				<p class="main__head__text__links">Favorite pages:</p>
+			</div>
+		</div>
+		<div class="main__text">
+			За допомогою JavaScript запропонувати користувачу вибрати стиль для сторінки. А саме:
+			<ul>
+				<li>фон для сторінки</li>
+				<li>тип шпифта на сторінці</li>
+				<li>вирівнювання для заголовка h1</li>
+				<li>фон для параграфа зі зсилками</li>
+				<li>колір тексту у параграфі зі зсилками і для самих зсилок. При чому колір тексту для зсилок призначити у циклі</li>
+				<li>колір, розмір, товщину тексту у елементі div</li>
+				<li>тип маркера для маркованого списку на сторінці</li>
+			</ul>
+			Таким чином слід запропонувати користувачу ввести десять налаштувань сторінки і застосувати їх.<br/>
+			ДОДАТОК ДО ЗАВДАННЯ: замість зсилок на конкретні сайти, вивести у панелі навігації силки на три сайти, які вкаже користувач. <br/>
+			Наприклад користувач у prompt ввів адресу facebook.com - в такому разі треба створити силку, яка вела б на сайт facebook, а текстом цієї зсилки (тим, по чому можна клікнути) буде також facebook.com
+		</div>
+	</div>
+<div id="popup">
+	<div class="c_popup__container">
+		<p class="c_popup__container__title">Settings</p>
+		<div class="c_popup__container__background">
+			<p class="c_popup__container__background__title">Page Background:</p>
+			<div class="c_popup__container__background__container"></div>
+		</div>
+		<div class="c_popup__container__font-type">
+			<p class="c_popup__container__font-type__title">Page Font:</p>
+			<div class="c_popup__container__font-type__container"></div>
+		</div>
+		<div class="c_popup__container__title-position">
+			<p class="c_popup__container__title-position__title">Title Position:</p>
+			<div class="c_popup__container__title-position__container"></div>
+		</div>
+		<div class="c_popup__container__change-link-color">
+			<p class="c_popup__container__change-link-color__title">Change color favourite pages:</p>
+			<div class="c_popup__container__change-link-color__container"></div>
+		</div>
+		<div class="c_popup__container__change-main-text">
+			<p class="c_popup__container__change-main-text__title">Main text settings:</p>
+			<div class="c_popup__container__change-main-text--container">
+				<div class="c_popup__container__change-main-text--container__item">
+					<label>Change text color</label>
+					<input class="c_popup__container__change-main-text--container__item__color" type="color" />
+				</div>
+				<div class="c_popup__container__change-main-text--container__item">
+					<label>Change text size</label>
+					<input class="c_popup__container__change-main-text--container__item__size" type="range" min="10" max="30" step="1" />
+				</div>
+				<div class="c_popup__container__change-main-text--container__item">
+					<label>Change text weight</label>
+					<input class="c_popup__container__change-main-text--container__item__weight" type="range" min="300" max="900" step="200" />
+				</div>
+			</div>
+		</div>
+		<div class="c_popup__container__change-mark-for-list">
+			<p class="c_popup__container__change-mark-for-list__title">Change list mark:</p>
+			<div class="c_popup__container__change-mark-for-list__container"></div>
+		</div>
+		<button class="c_popup__container__close">Close</button>
+	</div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
